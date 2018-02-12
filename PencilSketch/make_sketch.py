@@ -30,8 +30,13 @@ def dodgeNaive(image, mask):
 def dodgeV2(image, mask):
   return cv2.divide(image, 255-mask, scale=256)
 
-def make_sketch(filename, path = ""):
+def make_sketch(filename, m, n, path = ""):
 	img = cv2.imread(filename)
+
+
+    height, width, channels = img.shape
+    if (height, width, channels) != (m, n, 3):
+        img = np.resize(img, (m, n, 3))
 
 	img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 

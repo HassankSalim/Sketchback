@@ -9,7 +9,7 @@ DIR_PATH = '../img_align_celeba/'
 SKETCH_PATH = '../celeba_sketch/'
 
 for file_path in glob(DIR_PATH + '*.jpg'):
-    make_sketch(file_path, SKETCH_PATH)
+    make_sketch(file_path, m, n, SKETCH_PATH)
     # img = cv.imread(file_path)
     # img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
     # height, width, channels = img.shape
