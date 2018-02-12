@@ -1,6 +1,5 @@
 import numpy as np
 import os
-from filters import PencilSketch
 from glob import glob
 from make_sketch import make_sketch
 
